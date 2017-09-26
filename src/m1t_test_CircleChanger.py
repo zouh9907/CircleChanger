@@ -2,7 +2,7 @@
 TESTS the   CircleChanger   class in module   m1.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder and their colleagues.  April 2016.
+         Amanda Stouder and their colleagues.
 """
 
 import sys
@@ -28,20 +28,20 @@ HEIGHT = 500
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    test_init()
-    test_get_distance_from()
-    test_swell_or_shrink_once()
-    test_swell_or_shrink_repeatedly()
-    test_swallow()
-    test_change_color()
-    test_change_to_original_color()
-#     test_swell_to_prime()
-    test_change_to_previous_color()
+    run_test_init()
+    run_test_get_distance_from()
+    run_test_swell_or_shrink_once()
+    run_test_swell_or_shrink_repeatedly()
+    run_test_swallow()
+    run_test_change_color()
+    run_test_change_to_original_color()
+#     run_test_swell_to_prime()
+    run_test_change_to_previous_color()
 
 
-def evaluate_test(expected, actual, test_title=None, flush_time=0.05):
+def evaluate_test(expected, actual, run_test_title=None, flush_time=0.05):
     """
-    Prints the (optional) test_title,
+    Prints the (optional) run_test_title,
     then prints the expected and actual results for the test.
     If the test FAILED, also prints a failure message in red.
     """
@@ -58,8 +58,8 @@ def evaluate_test(expected, actual, test_title=None, flush_time=0.05):
 
     if PRINT_SUCCESSES or not passes_test:
         print()
-        if test_title:
-            print(test_title)
+        if run_test_title:
+            print(run_test_title)
         print('Expected:', expected)
         print('Actual:  ', actual, flush=True)
         time.sleep(flush_time)
@@ -178,7 +178,7 @@ def evaluate_circle_changer(circle_changer,
 ########################################################################
 
 
-def test_init():
+def run_test_init():
     """ Tests the   __init__   method of the CircleChanger class. """
     print()
     print('-----------------------------------------------------------')
@@ -264,7 +264,7 @@ def test_init():
     print('-----------------------------------------------------------')
 
 
-def test_get_distance_from():
+def run_test_get_distance_from():
     """ Tests the   get_distance_from   method. """
     print()
     print('-----------------------------------------------------------')
@@ -299,7 +299,7 @@ def test_get_distance_from():
     evaluate_test(0.0, cc2.get_distance_from(cc2.circle.center))
 
 
-def test_swell_or_shrink_once():
+def run_test_swell_or_shrink_once():
     """ Tests the   swell_or_shrink_once   method. """
     print()
     print('-----------------------------------------------------------')
@@ -351,7 +351,7 @@ def test_swell_or_shrink_once():
     print('-----------------------------------------------------------')
 
 
-def test_swell_or_shrink_repeatedly():
+def run_test_swell_or_shrink_repeatedly():
     """ Tests the   swell_or_shrink_repeatedly   method. """
     print()
     print('-----------------------------------------------------------')
@@ -369,7 +369,7 @@ def test_swell_or_shrink_repeatedly():
     print('-----------------------------------------------------------')
 
 
-def test_swallow():
+def run_test_swallow():
     """ Tests the   swallow   method. """
     print()
     print('-----------------------------------------------------------')
@@ -410,7 +410,7 @@ def test_swallow():
     print('-----------------------------------------------------------')
 
 
-def test_change_color():
+def run_test_change_color():
     """ Tests the   change_color   method. """
     print()
     print('-----------------------------------------------------------')
@@ -455,7 +455,7 @@ def test_change_color():
     print('-----------------------------------------------------------')
 
 
-def test_change_to_original_color():
+def run_test_change_to_original_color():
     """ Tests the   change_to_original_color   method. """
     print()
     print('-----------------------------------------------------------')
@@ -498,7 +498,7 @@ def test_change_to_original_color():
     print('-----------------------------------------------------------')
 
 
-def test_swell_to_prime():
+def run_test_swell_to_prime():
     """ Tests the   swell_to_prime   method. """
     print()
     print('-----------------------------------------------------------')
@@ -547,7 +547,7 @@ def test_swell_to_prime():
     print('-----------------------------------------------------------')
 
 
-def test_change_to_previous_color():
+def run_test_change_to_previous_color():
     """ Tests the   change_to_previous_color   method. """
     print()
     print('-----------------------------------------------------------')

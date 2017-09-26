@@ -4,7 +4,7 @@ A problem in which to practice:
   -- using SEQUENCES
 
 Authors: Valerie Galluzzi, David Mutchler, Dave Fisher, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  September 2016.
+         their colleagues and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
@@ -27,21 +27,21 @@ def main():
     until you begin work on the code that it is testing.
     """
     if m1_tests.is_implemented('__init__', 20):
-        test_init()
+        run_test_init()
     if m1_tests.is_implemented('get_distance_from'):
-        test_get_distance_from()
+        run_test_get_distance_from()
     if m1_tests.is_implemented('swell_or_shrink_once'):
-        test_swell_or_shrink_once()
+        run_test_swell_or_shrink_once()
     if m1_tests.is_implemented('swell_or_shrink_repeatedly', 4):
-        test_swell_or_shrink_repeatedly()
+        run_test_swell_or_shrink_repeatedly()
     if m1_tests.is_implemented('swallow'):
-        test_swallow()
+        run_test_swallow()
     if m1_tests.is_implemented('change_color'):
-        test_change_color()
+        run_test_change_color()
     if m1_tests.is_implemented('change_to_original_color'):
-        test_change_to_original_color()
+        run_test_change_to_original_color()
     if m1_tests.is_implemented('change_to_next_color_in_tuple'):
-        test_change_to_next_color_in_tuple()
+        run_test_change_to_next_color_in_tuple()
 
 
 ########################################################################
@@ -75,13 +75,13 @@ class CircleChanger(object):
                    colors
           -- [Eventually] Sets additional instance variables
                           as needed for other methods.
-        Example: See   test_init   below for an example.
+        Example: See   run_test_init   below for an example.
         Type hints:
             :type x: int
             :type y: int
             :type radius: int
             :type fill_color: str
-            :type colors: (str)
+            :type colors: sequence of str
         """
         self.animation_factor = 1  # Smaller => faster animations
         self.seconds_to_sleep = 0.5  # Default for each call to draw
@@ -93,8 +93,8 @@ class CircleChanger(object):
 
         ################################################################
         # TODO: 2.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the   test_init   function (below).
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the   run_test_init   function (below).
         #   Third, implement and test this method.
         #
         # Each TEST function gives an EXAMPLE that helps you understand
@@ -136,7 +136,7 @@ class CircleChanger(object):
         return s
 
     def draw(self, message=None):
-        ####### DO NOT MODIFY THIS METHOD #######
+        # ###### DO NOT MODIFY THIS METHOD #######
         """
         What comes in:
           -- self
@@ -167,14 +167,14 @@ class CircleChanger(object):
         #    "Draws this CircleChanger on a window,
         #     pausing briefly after doing so."
         #
-        # per the green doc_string (specification) above.
+        # per the doc_string (specification) above.
         # You do NOT need to know HOW   draw   does its work.
         #
         # But feel free to ask your instructor about it if you
         # are curious as to how   draw   works.
         # --------------------------------------------------------------
 
-        ####### DO NOT MODIFY THIS METHOD #######
+        # ###### DO NOT MODIFY THIS METHOD #######
         m1_tests.draw(self, message)
 
     def get_distance_from(self, point):
@@ -186,15 +186,15 @@ class CircleChanger(object):
            this CircleChanger's circle and the given rg.Point
         Side effects: None.
 
-        Example: See   test_get_distance_from   below for examples.
+        Example: See   run_test_get_distance_from   below for examples.
 
         Type hints:
             :type point: rg.Point
         """
         ################################################################
         # TODO: 3.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the   test_get_distance_from   function
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the   run_test_get_distance_from   function
         #   (below).  Third, implement and test this method.
         #
         # *** YOU   ** MUST **   USE the relevant method
@@ -231,15 +231,15 @@ class CircleChanger(object):
                changes to a color chosen at random from this
                CircleChanger's list of colors.
 
-        Example: See   test_swell_or_shrink_once   below for examples.
+        Example: See   run_test_swell_or_shrink_once   below for examples.
 
         Type hints:
             :type amount_to_swell_or_shrink: int
         """
         ################################################################
         # TODO: 4.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the   test_swell_or_shrink_once   function
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the   run_test_swell_or_shrink_once   function
         #   (below).  Third, implement and test this method.
         ################################################################
         #
@@ -320,8 +320,8 @@ class CircleChanger(object):
         """
         ################################################################
         # TODO: 5.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the  test_swell_or_shrink_repeatedly  function
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the  run_test_swell_or_shrink_repeatedly  function
         #   (below).  Third, implement and test this method.
         ################################################################
 
@@ -345,15 +345,15 @@ class CircleChanger(object):
                   plus (that is, concatenated with)
                   the other CircleChanger's tuple of colors.
         Side effects: None.
-        Example: See   test_swallow   below for examples.
+        Example: See   run_test_swallow   below for examples.
         Type hints:
             :type other_circle_changer: CircleChanger
             :rtype CircleChanger
         """
         ################################################################
         # TODO: 6.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the   test_swallow   function (below).
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the   run_test_swallow   function (below).
         #   Third, implement and test this method.
         #
         # *** YOU   ** MUST **   USE the relevant method(s)
@@ -383,8 +383,8 @@ class CircleChanger(object):
         """
         ################################################################
         # TODO: 7.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the   test_change_color   function (below).
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the   run_test_change_color   function (below).
         #   Third, implement and test this method.
         ################################################################
 
@@ -400,8 +400,8 @@ class CircleChanger(object):
         """
         ################################################################
         # TODO: 8.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the   test_change_to_original_color   function
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the   run_test_change_to_original_color   function
         #   (below).  Third, implement and test this method.
         ################################################################
 
@@ -439,8 +439,8 @@ class CircleChanger(object):
         """
         ################################################################
         # TODO: 9.
-        #   First, READ the green doc-string (specification) above.
-        #   Second, READ the   test_change_to_next_color_in_tuple
+        #   First, READ the doc-string (specification) above.
+        #   Second, READ the   run_test_change_to_next_color_in_tuple
         #   function (below).  Third, implement and test this method.
         ################################################################
 
@@ -449,18 +449,16 @@ class CircleChanger(object):
 # The TEST functions for the  CircleChanger  class begin here.
 ########################################################################
 
-def test_init():
+def run_test_init():
     """ Tests the   __init__   method of the CircleChanger class. """
-    m1_tests.test_init()  # This runs OUR tests.
+    m1_tests.run_test_init()  # This runs OUR tests.
 
     # This is a VISUAL test.
     m1_tests.start_drawing('Testing: the   __init__   method')
 
     # Construct two CircleChanger objects:
-    circle_changer1 = CircleChanger(100, 150, 100, 'blue',
-                                    ('red', 'blue', 'green'))
-    circle_changer2 = CircleChanger(300, 50, 30, 'yellow',
-                                    ('green', 'gold'))
+    circle_changer1 = CircleChanger(100, 150, 100, 'blue', ('red', 'blue', 'green'))
+    circle_changer2 = CircleChanger(300, 50, 30, 'yellow', ('green', 'gold'))
 
     # Print and draw them:
     print('After construction:')
@@ -481,8 +479,8 @@ def test_init():
     and the YELLOW circle has a thicker outline.""")
 
 
-def test_get_distance_from():
-    m1_tests.test_get_distance_from()  # This runs OUR tests
+def run_test_get_distance_from():
+    m1_tests.run_test_get_distance_from()  # This runs OUR tests
 
     print()
     print('The following are tests from within  m1  itself.')
@@ -513,9 +511,9 @@ def test_get_distance_from():
           get_distance_from(circle_changer3.circle.center))
 
 
-def test_swell_or_shrink_once():
+def run_test_swell_or_shrink_once():
     """ Tests the   swell_or_shrink_once   method. """
-    m1_tests.test_swell_or_shrink_once()  # This runs OUR tests
+    m1_tests.run_test_swell_or_shrink_once()  # This runs OUR tests
     random.seed(42)  # Lets us determine the results of the randomness
 
     # This is a VISUAL test.
@@ -584,9 +582,9 @@ def test_swell_or_shrink_once():
 #     circle_changer1.draw('Now GREEN, radius 80, thickness 10')
 
 
-def test_swell_or_shrink_repeatedly():
+def run_test_swell_or_shrink_repeatedly():
     """ Tests the   swell_or_shrink_repeatedly   method. """
-    m1_tests.test_swell_or_shrink_repeatedly()  # This runs OUR tests
+    m1_tests.run_test_swell_or_shrink_repeatedly()  # This runs OUR tests
     random.seed(999)  # Lets us determine the results of the randomness
 
     # This is a VISUAL test.
@@ -616,9 +614,9 @@ def test_swell_or_shrink_repeatedly():
     GREEN with thickness 10.""")
 
 
-def test_swallow():
+def run_test_swallow():
     """ Tests the   swallow   method. """
-    m1_tests.test_swallow()  # This runs OUR tests.
+    m1_tests.run_test_swallow()  # This runs OUR tests.
 
     # This is a VISUAL test.
     # Construct 2 CircleChanger objects, printing and drawing them.
@@ -692,9 +690,9 @@ def test_swallow():
         time.sleep(1)
 
 
-def test_change_color():
+def run_test_change_color():
     """ Tests the   change_color   method. """
-    m1_tests.test_change_color()  # This runs OUR tests.
+    m1_tests.run_test_change_color()  # This runs OUR tests.
     random.seed(77)  # Lets us determine the results of the randomness
 
     # This is a VISUAL test.
@@ -760,9 +758,9 @@ def test_change_color():
     a TINY one on the LEFT and a HUGE one on the RIGHT.""")
 
 
-def test_change_to_original_color():
+def run_test_change_to_original_color():
     """ Tests the   change_to_original_color   method. """
-    m1_tests.test_change_to_original_color()  # This runs OUR tests.
+    m1_tests.run_test_change_to_original_color()  # This runs OUR tests.
     random.seed(123)  # Lets us determine the results of the randomness
 
     # This is a VISUAL test.
@@ -805,7 +803,7 @@ def test_change_to_original_color():
     Should end as it started: BLACK and PURPLE.""")
 
 
-def test_change_to_next_color_in_tuple():
+def run_test_change_to_next_color_in_tuple():
     """ Tests the   change_to_next_color_in_tuple   method. """
 #     m1_tests.change_to_next_color()  # This runs OUR tests.
 
@@ -842,6 +840,7 @@ def test_change_to_next_color_in_tuple():
 
     circle_changer2.draw("""
     Should end with circles: BLUE and GREEN.""")
+
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
