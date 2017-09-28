@@ -28,6 +28,7 @@ HEIGHT = 500
 
 def main():
     """ Calls the   TEST   functions in this module. """
+    print('***** You accidentally ran the m1t_test_CircleChanger file ***** ')
     run_test_init()
     run_test_get_distance_from()
     run_test_swell_or_shrink_once()
@@ -36,7 +37,9 @@ def main():
     run_test_change_color()
     run_test_change_to_original_color()
 #     run_test_swell_to_prime()
-    run_test_change_to_previous_color()
+#     run_test_change_to_previous_color()
+    print('***** You accidentally ran the m1t_test_CircleChanger file ***** ')
+    print('You should only run m1.py')
 
 
 def evaluate_test(expected, actual, run_test_title=None, flush_time=0.05):
